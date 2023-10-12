@@ -13,6 +13,7 @@
 		clearInterval(interval);
 	});
 </script>
-
-<h1>Welcome to kit-starter by ilsubyeega!</h1>
+<section class="m-1">
+<h1 class="text-2xl font-medium" >Welcome to kit-starter by ilsubyeega!</h1>
 <p>Current Time: {text}</p>
+</section>
