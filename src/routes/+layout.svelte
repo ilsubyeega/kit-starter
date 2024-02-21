@@ -1,5 +1,5 @@
 <script lang="ts">
-    import '../app.css';
+    import '../app.sass';
 	import { onNavigate } from '$app/navigation';
 
 	onNavigate((navigation) => {

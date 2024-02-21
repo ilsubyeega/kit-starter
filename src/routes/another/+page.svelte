@@ -4,4 +4,4 @@
 </script>
 
 <a href="/">Go to index page</a>
-<p><Button on:click={() => (count += 1)}>{count}</Button></p>
+<p><Button on:click={() => (count += 1)} color="pink">{count}</Button></p>

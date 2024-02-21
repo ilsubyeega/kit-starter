@@ -39,9 +39,13 @@
 
     text-decoration: none
     width: fit-content
+    border: none
 
     &:hover
         filter: brightness(1.2)
+    
+    &:active
+        filter: brightness(0.8)
     
     div
         transform: skewX(12deg)
