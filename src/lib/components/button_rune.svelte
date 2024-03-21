@@ -6,31 +6,31 @@
         color: string;
     }
 
-	let { href = '', color = 'white' } : ButtonProps = $props();
+    let { href = '', color = 'white' }: ButtonProps = $props();
 
     const elementType = $derived(href ? 'a' : 'button');
     const role = $derived(href ? undefined : 'button');
 </script>
 
 <svelte:element
-	this={elementType}
-	class="button"
-	{href}
-	{...$props}
-	{role}
-	on:click
-	on:keypress
-	on:keyup
-	on:keydown
-	on:blur
-	on:focus
-	on:mouseenter
-	on:mouseleave
-	style:--color={color}
+    this={elementType}
+    class="button"
+    {href}
+    {...$props}
+    {role}
+    on:click
+    on:keypress
+    on:keyup
+    on:keydown
+    on:blur
+    on:focus
+    on:mouseenter
+    on:mouseleave
+    style:--color={color}
 >
-	<div>
-		<slot>Button</slot>
-	</div>
+    <div>
+        <slot>Button</slot>
+    </div>
 </svelte:element>
 
 <style lang="sass">

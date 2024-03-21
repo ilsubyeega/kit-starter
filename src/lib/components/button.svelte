@@ -1,29 +1,27 @@
 <script lang="ts">
-	export let href: string = '';
+    export let href: string = '';
     export let color: string = 'white';
 </script>
 
 <svelte:element
-	this={href ? 'a' : 'button'}
+    this={href ? 'a' : 'button'}
     class="button"
-	{href}
-	{...$$restProps}
-	role={href ? undefined : 'button'}
-	on:click
-	on:keypress
-	on:keyup
-	on:keydown
-	on:blur
-	on:focus
-	on:mouseenter
-	on:mouseleave
-
+    {href}
+    {...$$restProps}
+    role={href ? undefined : 'button'}
+    on:click
+    on:keypress
+    on:keyup
+    on:keydown
+    on:blur
+    on:focus
+    on:mouseenter
+    on:mouseleave
     style:--color={color}
 >
     <div>
         <slot>Button</slot>
     </div>
-	
 </svelte:element>
 
 <style lang="sass">

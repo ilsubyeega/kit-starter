@@ -1,6 +1,6 @@
 <script>
-	import Button from '$lib/components/button.svelte';
-	let count = 0;
+    import Button from '$lib/components/button.svelte';
+    let count = 0;
 </script>
 
 <a href="/">Go to index page</a>
