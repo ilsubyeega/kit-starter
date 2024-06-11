@@ -1,12 +1,7 @@
 <svelte:options runes={true} />
 
 <script lang="ts">
-    interface ButtonProps {
-        href: string;
-        color: string;
-    }
-
-    let { href = '', color = 'white' }: ButtonProps = $props();
+    let { href = '', color = 'white', children } = $props();
 
     const elementType = $derived(href ? 'a' : 'button');
     const role = $derived(href ? undefined : 'button');
@@ -16,20 +11,15 @@
     this={elementType}
     class="button"
     {href}
-    {...$props}
     {role}
-    on:click
-    on:keypress
-    on:keyup
-    on:keydown
-    on:blur
-    on:focus
-    on:mouseenter
-    on:mouseleave
     style:--color={color}
 >
     <div>
-        <slot>Button</slot>
+        {#if children}
+            {@render children()}
+        {:else}
+            Button
+        {/if}
     </div>
 </svelte:element>
 
