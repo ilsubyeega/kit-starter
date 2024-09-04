@@ -7,13 +7,7 @@
     const role = $derived(href ? undefined : 'button');
 </script>
 
-<svelte:element
-    this={elementType}
-    class="button"
-    {href}
-    {role}
-    style:--color={color}
->
+<svelte:element this={elementType} class="button" {href} {role} style:--color={color}>
     <div>
         {#if children}
             {@render children()}
